@@ -169,7 +169,7 @@ with preview_col:
 
             # Reduce preview resolution only.
             preview_image = original_image.copy()
-            preview_image.thumbnail((600, 400))
+            preview_image.thumbnail((300, 200))
 
             st.image(
                 preview_image,
