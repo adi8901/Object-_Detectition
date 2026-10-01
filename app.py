@@ -196,4 +196,19 @@ with upload_col:
     uploaded_file = st.file_uploader(
         "Choose a fabric image",
         type=["jpg", "jpeg", "png", "webp"],
-        help="Upload a fabric image for defect
+        help="Upload a fabric image for defect detection.",
+        key="fabric_image_uploader",
+    )
+
+    analyze_clicked = st.button(
+        "Analyze",
+        type="primary",
+        use_container_width=True,
+        disabled=uploaded_file is None,
+    )
+
+
+with preview_col:
+    st.markdown(
+        '<div class="section-title">Image Preview</div>',
+        unsafe_allow_html=True,
